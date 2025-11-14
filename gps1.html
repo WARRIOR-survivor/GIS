@@ -39,7 +39,7 @@
         const trailPoints = [];
 
         // Polyline for the trail
-        const trailLine = L.polyline(trailPoints, { color: 'blue' }).addTo(map);
+        const trailLine = L.polyline(trailPoints, { color: 'green' }).addTo(map);
 
         // MQTT Client Setup
         // GANTI PAKE AKUN MQTT, ini contoh gratis
@@ -52,9 +52,9 @@
 });
         client.on('connect', () => {
             console.log('Connected to MQTT broker'); 
-            client.subscribe('car/gps', (err) => { //<<<<<<<<UBAH TOPIK INI 'car/gps'
+            client.subscribe('car/gps082', (err) => { //<<<<<<<<UBAH TOPIK INI 'car/gps'
                 if (!err) {
-                    console.log('Subscribed to car/gps topic');
+                    console.log('Subscribed to car/gps082 topic');
                 }
             });
         });
